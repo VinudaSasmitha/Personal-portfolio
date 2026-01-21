@@ -129,7 +129,20 @@ nav {
     display: none;
 }
 
+
 .nav-links.active {
     display: flex;
 }
+
+/* --- HERO SECTION --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+    position: relative;
+    overflow: hidden;
 }
