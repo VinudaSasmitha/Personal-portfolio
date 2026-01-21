@@ -198,3 +198,12 @@
             position: relative;
             overflow: hidden;
         }
+
+        /* Magic Stars */
+        .magic-star {
+            position: absolute;
+            color: var(--primary);
+            opacity: 0.3;
+            animation: floatStar 10s infinite linear;
+            z-index: -1;
+        }
