@@ -25,20 +25,21 @@
 
 <body>
 
-
-    <div class="nav-container">
-        <div class="logo">Vinuda.dev</div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
-        <div class="nav-links" id="nav-links">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <button class="theme-toggle" id="theme-btn" aria-label="Toggle Theme"><i
-                    class="fas fa-desktop"></i></button>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Vinuda.dev</div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="theme-btn" aria-label="Toggle Theme"><i
+                        class="fas fa-desktop"></i></button>
+            </div>
         </div>
-    </div>
     </nav>
+
     <section class="hero hidden" id="about">
         <i class="star magic-star"></i>
         <i class="code magic-star"></i>
@@ -50,6 +51,23 @@
                 <path
                     d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" />
             </svg>
+        </div>
+
+        <h1>Hi, I'm <span>Vinuda Sasmitha</span></h1>
+
+        <p class="hero-subtitle">
+            I am a <span class="typing-text"></span>
+        </p>
+
+        <button class="about-toggle-btn" id="aboutToggle">More About Me <i class="fas fa-chevron-down"></i></button>
+
+        <div class="about-content-wrapper" id="aboutContent">
+            <div class="hero-description">
+                <p>Hi! I'm Vinuda, a motivated and detail-oriented Software Engineering undergraduate at the University
+                    of Westminster.</p>
+                <p>I specialize in Full Stack Development and have a passion for creating innovative solutions using
+                    Python, Java, and JavaScript.</p>
+            </div>
         </div>
 
 </body>
