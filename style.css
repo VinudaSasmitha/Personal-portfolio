@@ -1,0 +1,29 @@
+/* --- THEME VARIABLES --- */
+:root {
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f172a;
+    --text-sub: #475569;
+    --border: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(135deg, #4f46e5 0%, #a855f7 100%);
+    --badge-bg: #e0e7ff;
+    --badge-text: #4338ca;
+    --input-bg: #f1f5f9;
+}
+
+[data-theme="dark"] {
+    --primary: #6366f1;
+    --bg-body: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f1f5f9;
+    --text-sub: #cbd5e1;
+    --border: #334155;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    --badge-bg: #312e81;
+    --badge-text: #c7d2fe;
+    --input-bg: #334155;
+}
