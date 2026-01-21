@@ -113,4 +113,23 @@ nav {
 
 .nav-links a:hover::after {
     width: 100%;
+
+}
+
+.nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-card);
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: none;
+}
+
+.nav-links.active {
+    display: flex;
+}
 }
