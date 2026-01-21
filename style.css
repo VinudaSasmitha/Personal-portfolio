@@ -207,3 +207,33 @@
             animation: floatStar 10s infinite linear;
             z-index: -1;
         }
+
+        magic-star:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            font-size: 1.5rem;
+            animation-duration: 12s;
+        }
+
+        .magic-star:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            font-size: 1rem;
+            animation-duration: 15s;
+            animation-delay: 2s;
+        }
+
+        .magic-star:nth-child(3) {
+            top: 80%;
+            left: 20%;
+            font-size: 2rem;
+            animation-duration: 18s;
+            animation-delay: 1s;
+        }
+
+        .magic-star:nth-child(4) {
+            top: 15%;
+            right: 25%;
+            font-size: 1.2rem;
+            animation-duration: 20s;
+        }
