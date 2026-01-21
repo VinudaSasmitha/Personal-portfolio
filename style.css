@@ -255,3 +255,30 @@
                 opacity: 0.3;
             }
         }
+
+        * Profile Icon Drawing Animation */ .profile-container {
+            width: 180px;
+            height: 180px;
+            margin-bottom: 25px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--primary);
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            animation: fillProfile 1s ease-in-out 3s forwards;
+        }
+
+        .profile-svg path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: drawProfile 3s ease-in-out forwards;
+        }
