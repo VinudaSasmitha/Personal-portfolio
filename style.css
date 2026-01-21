@@ -295,3 +295,12 @@
                 fill: rgba(79, 70, 229, 0.1);
             }
         }
+
+        /* Typography */
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
