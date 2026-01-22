@@ -475,3 +475,38 @@
         .soft-skill-tag i {
             color: var(--primary);
         }
+
+        /* --- PROJECTS SECTION --- */
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            transition: 0.4s;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: var(--primary);
+        }
+
+        .project-content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .project-details ul {
+            padding-left: 18px;
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            list-style-type: disc;
+        }
+
+        .project-details li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
