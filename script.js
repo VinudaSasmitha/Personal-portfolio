@@ -1,28 +1,28 @@
-// Typing Effect - Initial Draft (WIP)
+// 1️⃣ Typing Effect
 const typingText = document.querySelector(".typing-text");
 const words = ["Web Developer", "Problem Solver", "Innovation Enthusiast"];
-let wordIndex = 0;
-let charIndex = 0;
+let wordIndex = 0, charIndex = 0, isDeleting = false;
 
 function type() {
     const currentWord = words[wordIndex];
-
-
-    typingText.textContent = currentWord.substring(0, charIndex + 1);
-    charIndex++;
-
-
-    if (charIndex === currentWord.length) {
-        wordIndex++;
-        charIndex = 0;
-
-        // Simple logic to loop back
-        if (wordIndex === words.length) {
-            wordIndex = 0;
-        }
+    if (isDeleting) {
+        typingText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
     }
 
-    setTimeout(type, 200);
-}
+    let typeSpeed = isDeleting ? 50 : 100;
 
+    if (!isDeleting && charIndex === currentWord.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        typeSpeed = 500;
+    }
+    setTimeout(type, typeSpeed);
+}
 document.addEventListener('DOMContentLoaded', type);
