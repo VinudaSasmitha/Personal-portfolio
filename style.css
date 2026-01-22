@@ -510,3 +510,26 @@
             margin-bottom: 8px;
             font-size: 0.95rem;
         }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background-color: var(--badge-bg);
+            color: var(--badge-text);
+            transition: 0.3s;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.05);
+            background-color: var(--primary);
+            color: white;
+        }
