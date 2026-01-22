@@ -533,3 +533,34 @@
             background-color: var(--primary);
             color: white;
         }
+
+
+        .learned-text {
+            font-size: 0.85rem;
+            margin-top: 15px;
+            color: var(--text-sub);
+            font-style: italic;
+            border-left: 2px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        .project-links {
+            padding: 20px 25px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .link-item {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .link-item:hover {
+            color: var(--primary);
+        }
