@@ -648,3 +648,17 @@
             background: var(--primary-hover);
             transform: translateY(-3px);
         }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--border);
+            color: var(--text-sub);
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
