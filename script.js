@@ -109,13 +109,16 @@ window.addEventListener('scroll', () => {
 });
 stBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-
-// 6️ About Toggle - V1 (Basic)
+// 6️ About Toggle -  (Icon Missing Bug)
 const abtBtn = document.getElementById('aboutToggle');
 const abtContent = document.getElementById('aboutContent');
 
+if (abtBtn && abtContent) {
+    abtBtn.addEventListener('click', () => {
+        abtContent.classList.toggle('open');
+        const isOpen = abtContent.classList.contains('open');
 
-abtBtn.addEventListener('click', () => {
-    abtContent.classList.toggle('open');
 
-});
+        abtBtn.innerText = isOpen ? 'Show Less' : 'More About Me';
+    });
+}
