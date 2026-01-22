@@ -51,3 +51,34 @@ document.addEventListener('click', (e) => {
         toggleMenu(false);
     }
 });
+
+// 3️ Theme Logic
+const themeBtn = document.getElementById('theme-btn');
+const themeIcon = themeBtn.querySelector('i');
+const themes = ['system', 'light', 'dark'];
+let currentTheme = localStorage.getItem('theme') || 'system';
+
+function applyTheme(t) {
+    document.body.removeAttribute('data-theme');
+    if (t === 'dark') {
+        document.body.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fas fa-moon';
+    } else if (t === 'light') {
+        themeIcon.className = 'fas fa-sun';
+    } else {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.setAttribute('data-theme', 'dark');
+        }
+        themeIcon.className = 'fas fa-desktop';
+    }
+    if (t === 'system') localStorage.removeItem('theme');
+    else localStorage.setItem('theme', t);
+    currentTheme = t;
+}
+
+applyTheme(currentTheme);
+
+themeBtn.addEventListener('click', () => {
+    const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
+    applyTheme(themes[nextIndex]);
+});
