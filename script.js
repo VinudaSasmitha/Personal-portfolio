@@ -26,17 +26,28 @@ function type() {
     setTimeout(type, typeSpeed);
 }
 document.addEventListener('DOMContentLoaded', type);
-// 2️ Menu Logic - Basic Version (check)
+
+// 2️ Menu Logic
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+function toggleMenu(isOpen) {
+    navLinks.classList.toggle('active', isOpen);
+    const icon = hamburger.querySelector('i');
+    icon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+    hamburger.setAttribute('aria-expanded', isOpen);
+}
+
+hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isActive = navLinks.classList.contains('active');
+    toggleMenu(!isActive);
 });
 
+document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
 
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-    });
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+        toggleMenu(false);
+    }
 });
