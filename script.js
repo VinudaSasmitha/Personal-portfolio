@@ -1,4 +1,4 @@
-// 1️⃣ Typing Effect
+// 1️ Typing Effect
 const typingText = document.querySelector(".typing-text");
 const words = ["Web Developer", "Problem Solver", "Innovation Enthusiast"];
 let wordIndex = 0, charIndex = 0, isDeleting = false;
@@ -26,3 +26,17 @@ function type() {
     setTimeout(type, typeSpeed);
 }
 document.addEventListener('DOMContentLoaded', type);
+// 2️ Menu Logic - Basic Version (check)
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
