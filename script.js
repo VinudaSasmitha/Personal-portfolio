@@ -82,3 +82,22 @@ themeBtn.addEventListener('click', () => {
     const nextIndex = (themes.indexOf(currentTheme) + 1) % themes.length;
     applyTheme(themes[nextIndex]);
 });
+
+// 4️ Scroll Observer & Auto-Fill Skills
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('show');
+            if (e.target.id === 'skills') {
+                e.target.querySelectorAll('.skill-bar span').forEach(bar => {
+                    const width = bar.dataset.width;
+                    bar.style.width = width;
+                    const label = bar.parentElement.previousElementSibling?.querySelector('span:last-child');
+                    if (label && label.innerText === '') label.innerText = width;
+                });
+            }
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
