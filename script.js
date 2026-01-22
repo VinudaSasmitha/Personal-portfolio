@@ -101,3 +101,10 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+
+// 5️ Scroll Top Button
+const stBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+    stBtn.classList.toggle('active', window.scrollY > 300);
+});
+stBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
