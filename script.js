@@ -109,16 +109,15 @@ window.addEventListener('scroll', () => {
 });
 stBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// 6️ About Toggle -  (Icon Missing Bug)
+// 6️ About Toggle
 const abtBtn = document.getElementById('aboutToggle');
 const abtContent = document.getElementById('aboutContent');
-
 if (abtBtn && abtContent) {
     abtBtn.addEventListener('click', () => {
         abtContent.classList.toggle('open');
         const isOpen = abtContent.classList.contains('open');
-
-
-        abtBtn.innerText = isOpen ? 'Show Less' : 'More About Me';
+        abtBtn.innerHTML = isOpen
+            ? 'Show Less <i class="fas fa-chevron-up"></i>'
+            : 'More About Me <i class="fas fa-chevron-down"></i>';
     });
 }
