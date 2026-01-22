@@ -108,3 +108,14 @@ window.addEventListener('scroll', () => {
     stBtn.classList.toggle('active', window.scrollY > 300);
 });
 stBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+
+// 6️ About Toggle - V1 (Basic)
+const abtBtn = document.getElementById('aboutToggle');
+const abtContent = document.getElementById('aboutContent');
+
+
+abtBtn.addEventListener('click', () => {
+    abtContent.classList.toggle('open');
+
+});
